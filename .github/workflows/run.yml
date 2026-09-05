@@ -1,0 +1,9 @@
+name: macOS NR Agent Install
+on: workflow_dispatch
+jobs:
+  deploy:
+    runs-on: macos-latest
+    steps:
+      - name: Run New Relic CLI
+        run: |
+          https://one.newrelic.com/marketplace/install-data-source?account=8477102&duration=3600000&state=38dab8a4-21d8-2b75-3985-b0ede3f7e5ee
