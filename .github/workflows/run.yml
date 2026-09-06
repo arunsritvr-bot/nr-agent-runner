@@ -4,6 +4,7 @@ jobs:
   deploy:
     runs-on: macos-latest
     steps:
-      - name: Run New Relic CLI
+      - name: Install New Relic CLI and Agent
         run: |
-               curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh
+          curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh | bash
+          sudo NEW_RELIC_API_KEY=NRAK-5I0OW4R0TFCSYMLRIPWFQI40JGD NEW_RELIC_ACCOUNT_ID=8477102 /usr/local/bin/newrelic install -y
